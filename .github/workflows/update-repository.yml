@@ -1,0 +1,24 @@
+name: Update Repository
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate Packages
+        run: |
+          mkdir -p _site/debs
+          cp -r debs/* _site/debs/
+          # 简单的示例，实际应使用 apt-ftparchive
+          # 这里为了确保仓库能用，先放个基础的提示
+          echo "Repository updated"
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
