@@ -1,9 +1,9 @@
-Origin: Lgy0714's Repo
-Label: Lgy0714's Repo
+Origin: 柳贯一's Repo
+Label: 柳贯一's Repo
 Suite: stable
 Version: 1.0
 Codename: ios
 Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
 Components: main
-Description: Lgy0714's Jailbreak Repository
+Description: 柳贯一's Jailbreak Repository
 Icon: file://CydiaIcon.png

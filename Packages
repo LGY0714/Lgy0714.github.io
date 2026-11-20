@@ -5,11 +5,11 @@ Maintainer: huami
 Installed-Size: 3208
 Depends: firmware (>= 5.0), mobilesubstrate
 Filename: ./debs/com.huami.dyyy_2.3-0_iphoneos-arm64e-roothide.deb
-Size: 706524
-MD5sum: 77f0a60eca5eeef0c7d519eb76ee0cae
-SHA1: a320846fe4bdbaa81bb866d79a973647212d83bd
-SHA256: 597ee43ef39798f2f2d80a49da44c2cfc2611c9158e09173b7899c2b9eb15bae
-Section: Tweaks
+Size: 706472
+MD5sum: a29a0de6e9d7c9fa9946e15d97179b5c
+SHA1: fa23c502bd2a97d3c5e04170adee2d00fa725d77
+SHA256: f5887c16641c11483d8a0df1f23089b714ee46a43eb0a426bfdf6d75cdc0d061
+Section: Themes (bootlogos)
 Priority: optional
 Homepage: https://github.com/huami1314/DYYY
 Description: 仅供学习交流，请在 24 小时内自觉删除。
