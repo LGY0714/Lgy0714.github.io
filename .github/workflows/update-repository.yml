@@ -1,4 +1,4 @@
-name: Update Repository
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -6,19 +6,20 @@ on:
       - main
 
 jobs:
-  update:
+  deploy:
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     steps:
-      - uses: actions/checkout@v4
-      - name: Generate Packages
-        run: |
-          mkdir -p _site/debs
-          cp -r debs/* _site/debs/
-          # 简单的示例，实际应使用 apt-ftparchive
-          # 这里为了确保仓库能用，先放个基础的提示
-          echo "Repository updated"
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
